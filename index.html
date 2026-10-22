@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mauban, Quezon — History Lives Here</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#home" class="logo-area" aria-label="Mauban Home">
+        <div class="logo-emblem">✠</div>
+        <div class="logo-text">
+          <span class="main">Mauban</span>
+          <span class="sub">Quezon, Philippines</span>
+        </div>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#natural">Natural Attractions</a></li>
+        <li><a href="#heritage">Heritage Houses</a></li>
+        <li><a href="#landmarks">Historical Landmarks</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <div class="nav-search-area">
+        <input type="text" class="nav-search-input" id="searchInput" placeholder="Search attractions..." aria-label="Search attractions">
+        <button class="nav-search" id="searchToggle" aria-label="Toggle search">🔍</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-image-wrapper">
+      <img src="mauban.jpg" alt="Sunset at Cagbalete Island, Mauban">
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Sun, Sea, History, and Heritage</div>
+        <h1 class="hero-title">Mauban, Quezon</h1>
+        <p class="hero-subtitle">Where the past meets the present, and nature paints the perfect backdrop.</p>
+        <a href="#featured" class="btn-outline">
+          Explore Mauban <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-caption">Sunset at Cagbalete Island, Mauban</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-illustration">
+          <img src="saint.jpg" alt="Saint Bonaventure Parish Church illustration" loading="lazy">
+        </div>
+        <div class="about-text">
+          <h2>About Mauban</h2>
+          <div class="sub-ornament"><span>✦</span></div>
+          <p>More than just stunning beaches and waterfalls, Mauban is a municipality in Quezon rich in history, heritage, and natural beauty. From its colonial landmarks and ancestral houses to its pristine islands and majestic waterfalls, this town offers a unique blend of the past and the present.</p>
+          <a href="#history" class="btn-outline" style="border-color: var(--brown); color: var(--brown);">
+            Learn More About Mauban <span class="arrow">→</span>
+          </a>
+          <div class="about-collage">
+            <img src="4.jpg" alt="Historical building" loading="lazy">
+            <img src="yangin.jpg" alt="Beach" loading="lazy">
+            <img src="alitap.jpg" alt="Waterfall" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLORE CATEGORIES -->
+  <section class="explore-section" id="explore">
+    <div class="container">
+      <h2 class="section-heading light">Explore Mauban</h2>
+      <div class="ornament"><span>✦ ✦ ✦</span></div>
+
+      <div class="explore-grid">
+        <div class="explore-card">
+          <div class="explore-icon">🏛️</div>
+          <h3>History</h3>
+          <p>Discover the town's rich past and legendary figures.</p>
+          <a href="#history" class="explore-link">View More →</a>
+        </div>
+        <div class="explore-card">
+          <div class="explore-icon">🌊</div>
+          <h3>Natural Attractions</h3>
+          <p>Pristine beaches, majestic waterfalls, and breathtaking landscapes.</p>
+          <a href="#natural" class="explore-link">View More →</a>
+        </div>
+        <div class="explore-card">
+          <div class="explore-icon">🏡</div>
+          <h3>Heritage Houses</h3>
+          <p>Step back in time with Mauban's century-old ancestral homes.</p>
+          <a href="#heritage" class="explore-link">View More →</a>
+        </div>
+        <div class="explore-card">
+          <div class="explore-icon">🗿</div>
+          <h3>Historical Landmarks</h3>
+          <p>Visit significant sites that tell the story of Mauban.</p>
+          <a href="#landmarks" class="explore-link">View More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED ATTRACTIONS -->
+  <section class="featured-section" id="featured">
+    <div class="container">
+      <h2 class="section-heading">Featured Attractions</h2>
+      <div class="ornament"><span>✦ ✦ ✦</span></div>
+
+      <div class="featured-scroll-wrapper">
+        <div class="featured-scroll" id="featuredScroll">
+          <!-- 1 -->
+          <a href="#natural" class="attraction-card" data-title="Cagbalete Island">
+            <div class="attraction-card-img">
+              <img src="cagbalete.jpg" alt="Cagbalete Island" loading="lazy">
+            </div>
+            <div class="attraction-card-body">
+              <h3>Cagbalete Island</h3>
+              <p>White sand beaches and crystal-clear waters.</p>
+              <span class="arrow-link">Discover <span class="arrow">→</span></span>
+            </div>
+          </a>
+          <!-- 2 -->
+          <a href="#natural" class="attraction-card" data-title="Dahoyhoy Falls">
+            <div class="attraction-card-img">
+              <img src="dahoyhoy.jpg" alt="Dahoyhoy Falls" loading="lazy">
+            </div>
+            <div class="attraction-card-body">
+              <h3>Dahoyhoy Falls</h3>
+              <p>An easy trek to a refreshing paradise.</p>
+              <span class="arrow-link">Discover <span class="arrow">→</span></span>
+            </div>
+          </a>
+          <!-- 3 -->
+          <a href="#heritage" class="attraction-card" data-title="Ancestral Houses">
+            <div class="attraction-card-img">
+              <img src="5.jpg" alt="Ancestral Houses" loading="lazy">
+            </div>
+            <div class="attraction-card-body">
+              <h3>Ancestral Houses</h3>
+              <p>Colonial charm in every corner.</p>
+              <span class="arrow-link">Discover <span class="arrow">→</span></span>
+            </div>
+          </a>
+          <!-- 4 -->
+          <a href="#landmarks" class="attraction-card" data-title="Mauban Seawall">
+            <div class="attraction-card-img">
+              <img src="seawall.jpg" alt="Mauban Seawall" loading="lazy">
+            </div>
+            <div class="attraction-card-body">
+              <h3>Mauban Seawall</h3>
+              <p>A tribute to the town's proud heritage.</p>
+              <span class="arrow-link">Discover <span class="arrow">→</span></span>
+            </div>
+          </a>
+          <!-- 5 -->
+          <a href="#landmarks" class="attraction-card" data-title="Mauban Public Bath">
+            <div class="attraction-card-img">
+              <img src="publicbath.jpg" alt="Mauban Public Bath" loading="lazy">
+            </div>
+            <div class="attraction-card-body">
+              <h3>Mauban Public Bath</h3>
+              <p>A glimpse into the town's ancient past.</p>
+              <span class="arrow-link">Discover <span class="arrow">→</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HISTORY PAGE ==================== -->
+  <section class="page-section" id="history" style="background: var(--ivory);">
+    <div class="container">
+      <h2 class="page-title">History of Mauban</h2>
+      <div class="ornament"><span>✦ ✦ ✦</span></div>
+      <p class="page-intro">A town shaped by the sea, faith, and resilience — from its Franciscan roots to the present day.</p>
+
+      <div class="image-panel">
+        <img src="saint.jpg" alt="Saint Bonaventure Parish Church" loading="lazy">
+        <div class="image-caption">Saint Bonaventure Parish Church, Mauban</div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">c. 1583</div>
+          <h3>Franciscan Missionaries Arrive</h3>
+          <p>Spanish Franciscan missionaries established Mauban around this year, bringing Christianity and colonial administration to the area.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">17th Century</div>
+          <h3>Relocations and Moro Raids</h3>
+          <p>Frequent Moro pirate raids forced the town to relocate several times, shaping the settlement's defensive character and the resilience of its people.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">1647</div>
+          <h3>Permanent Settlement</h3>
+          <p>The town finally settled at its current location. The original stone church was also built around this time, becoming the spiritual heart of Mauban.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">Early History</div>
+          <h3>The Dumagats and Gatuban</h3>
+          <p>Early inhabitants included the Dumagats, an indigenous people who lived along the Sierra Madre Mountain range. Gat Pagil, also known as Gatuban, is remembered for helping repel raids. The name Mauban is associated with Gatuban, whose nickname refers to gray hair.</p>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        “The name Mauban is associated with Gatuban, whose nickname refers to gray hair — a reminder of the town's legendary defender.”
+      </div>
+
+      <h3 class="cinzel" style="font-size: 1.5rem; margin: 2rem 0 1rem; color: var(--charcoal);">Saint Bonaventure Parish Church</h3>
+      <p style="color: var(--brown); font-size: 1.1rem; line-height: 1.8;">Also known as Mauban Church, this historic structure was first built around 1647. It stands as a testament to the town's colonial past and its enduring faith. The church has witnessed centuries of history, from pirate raids to the present day.</p>
+
+      <p style="color: var(--brown); font-size: 1.1rem; line-height: 1.8; margin-top: 1rem;"><em>Note: Historical accounts presented here are drawn from local sources and tradition. Some dates and events remain subjects of ongoing historical research.</em></p>
+    </div>
+  </section>
+
+  <!-- ==================== NATURAL ATTRACTIONS PAGE ==================== -->
+  <section class="page-section" id="natural" style="background: var(--parchment);">
+    <div class="container">
+      <h2 class="page-title">Natural Attractions</h2>
+      <div class="ornament"><span>✦ ✦ ✦</span></div>
+      <p class="page-intro">From creamy white sand to cascading falls, Mauban's landscapes are as diverse as they are beautiful.</p>
+
+      <div class="attraction-page-grid">
+        <div class="attraction-page-card">
+          <img src="cagbalete.jpg" alt="Cagbalete Island" loading="lazy">
+          <div class="attraction-page-card-body">
+            <h3>Cagbalete Island</h3>
+            <p>Famous for its creamy white sand and turquoise waters, the shoreline changes dramatically with the tides. During low tide, exposed sand ripples create a unique and breathtaking landscape.</p>
+          </div>
+        </div>
+        <div class="attraction-page-card">
+          <img src="yangin.jpg" alt="Yang-In Sandbar" loading="lazy">
+          <div class="attraction-page-card-body">
+            <h3>Yang-In Sandbar</h3>
+            <p>This sandbar becomes a wide sandy expanse during low tide and transforms into a shallow swimming area during high tide, offering a dynamic coastal experience.</p>
+          </div>
+        </div>
+        <div class="attraction-page-card">
+          <img src="dahoyhoy.jpg" alt="Dahoyhoy Falls" loading="lazy">
+          <div class="attraction-page-card-body">
+            <h3>Dahoyhoy Falls</h3>
+            <p>Accessible via a paved trail, this waterfall offers an easy trek to a refreshing natural pool surrounded by lush greenery, a perfect escape into nature.</p>
+          </div>
+        </div>
+        <div class="attraction-page-card">
+          <img src="alitap.jpg" alt="Alitap Falls" loading="lazy">
+          <div class="attraction-page-card-body">
+            <h3>Alitap Falls</h3>
+            <p>Set in a forest setting, Alitap Falls is now more accessible thanks to road development, with a shorter trail leading visitors to its cool waters.</p>
+          </div>
+        </div>
+        <div class="attraction-page-card">
+          <img src="hagdan.png" alt="Hagdan-Hagdan Falls" loading="lazy">
+          <div class="attraction-page-card-body">
+            <h3>Hagdan-Hagdan Falls</h3>
+            <p>A series of short, broad cascades along the Balaybalay River. Finding a reliable local guide is essential to safely explore this hidden gem.</p>
+          </div>
+        </div>
+        <div class="attraction-page-card">
+          <img src="bisibis.jpg" alt="Bisibis Falls" loading="lazy">
+          <div class="attraction-page-card-body">
+            <h3>Bisibis Falls</h3>
+            <p>Located near the sea, Bisibis Falls is accessible by boat from Barangay Cagsiay III, offering a unique coastal waterfall experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HERITAGE HOUSES PAGE (FLASHCARD CAROUSEL) ==================== -->
+  <section class="page-section" id="heritage" style="background: var(--ivory);">
+    <div class="container">
+      <h2 class="page-title">Heritage Houses</h2>
+      <div class="ornament"><span>✦ ✦ ✦</span></div>
+      <p class="page-intro">Mauban's ancestral houses reflect the Spanish colonial-era <em>bahay na bato</em> style, preserving the character of streets around the town plaza and Quezon Avenue.</p>
+
+      <div class="flashcard-carousel-container">
+        <button class="flashcard-nav flashcard-prev" id="flashcardPrev" aria-label="Previous card">←</button>
+        
+        <div class="flashcard-track" id="flashcardTrack">
+          <!-- Card 1 -->
+          <div class="flashcard" data-lightbox="1.jpg">
+            <img src="1.jpg" alt="Heritage House" loading="lazy">
+            <div class="flashcard-body">
+              <h3>Heritage House</h3>
+              <p>A fine example of colonial architecture.</p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="flashcard" data-lightbox="2.jpg">
+            <img src="2.jpg" alt="Heritage House" loading="lazy">
+            <div class="flashcard-body">
+              <h3>Heritage House</h3>
+              <p>Steeped in history and local lore.</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="flashcard" data-lightbox="3.jpg">
+            <img src="3.jpg" alt="Heritage House" loading="lazy">
+            <div class="flashcard-body">
+              <h3>Heritage House</h3>
+              <p>Preserving the town's architectural heritage.</p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="flashcard" data-lightbox="4.jpg">
+            <img src="4.jpg" alt="Heritage House" loading="lazy">
+            <div class="flashcard-body">
+              <h3>Heritage House</h3>
+              <p>A window into Mauban's past.</p>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="flashcard" data-lightbox="5.jpg">
+            <img src="5.jpg" alt="Heritage House" loading="lazy">
+            <div class="flashcard-body">
+              <h3>Heritage House</h3>
+              <p>Colonial charm in every corner.</p>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="flashcard" data-lightbox="6.jpg">
+            <img src="6.jpg" alt="Heritage House" loading="lazy">
+            <div class="flashcard-body">
+              <h3>Heritage House</h3>
+              <p>A testament to the town's enduring legacy.</p>
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div class="flashcard" data-lightbox="7.jpg">
+            <img src="7.jpg" alt="Heritage House" loading="lazy">
+            <div class="flashcard-body">
+              <h3>Heritage House</h3>
+              <p>Echoes of a bygone era.</p>
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div class="flashcard" data-lightbox="8.jpg">
+            <img src="8.jpg" alt="Heritage House" loading="lazy">
+            <div class="flashcard-body">
+              <h3>Heritage House</h3>
+              <p>Architectural beauty preserved.</p>
+            </div>
+          </div>
+          <!-- Card 9 -->
+          <div class="flashcard" data-lightbox="9.jpg">
+            <img src="9.jpg" alt="Heritage House" loading="lazy">
+            <div class="flashcard-body">
+              <h3>Heritage House</h3>
+              <p>A glimpse into the past.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="flashcard-nav flashcard-next" id="flashcardNext" aria-label="Next card">→</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== HISTORICAL LANDMARKS PAGE ==================== -->
+  <section class="page-section" id="landmarks" style="background: var(--parchment);">
+    <div class="container">
+      <h2 class="page-title">Historical Landmarks</h2>
+      <div class="ornament"><span>✦ ✦ ✦</span></div>
+      <p class="page-intro">Sites that stand as silent witnesses to Mauban's storied past.</p>
+
+      <div class="attraction-page-grid">
+        <div class="attraction-page-card">
+          <img src="rizal.jpg" alt="Rizal Hill Park" loading="lazy">
+          <div class="attraction-page-card-body">
+            <h3>Rizal Hill Park</h3>
+            <p>Historically known as Calvario Hill, this site features the Rizal Monument and served as an observation post during World War II, offering a panoramic view of the town and its surroundings.</p>
+          </div>
+        </div>
+        <div class="attraction-page-card">
+          <img src="seawall.jpg" alt="Mauban Seawall" loading="lazy">
+          <div class="attraction-page-card-body">
+            <h3>Mauban Seawall</h3>
+            <p>More than a coastal defense, the seawall holds cultural significance. It features the Gatuban monument and is remembered for its role during the Japanese landing in Quezon in 1941.</p>
+          </div>
+        </div>
+        <div class="attraction-page-card">
+          <img src="publicbath.jpg" alt="Mauban Public Bath" loading="lazy">
+          <div class="attraction-page-card-body">
+            <h3>Mauban Public Bath</h3>
+            <p>Reportedly constructed in 1725, this historic structure was built using limestone and seashells. It once supplied spring water to the community and is now preserved as a cherished historical landmark.</p>
+          </div>
+        </div>
+        <!-- New 4th Landmark -->
+        <div class="attraction-page-card">
+          <img src="gatuban.jpg" alt="Gatuban Park" loading="lazy">
+          <div class="attraction-page-card-body">
+            <h3>Gatuban Park</h3>
+            <p>A public park dedicated to Gatuban, the legendary defender of Mauban. It serves as a memorial to his bravery and the town's enduring spirit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT PAGE ==================== -->
+  <section class="page-section" id="about-page" style="background: var(--ivory);">
+    <div class="container">
+      <h2 class="page-title">Preserving the Stories of Mauban</h2>
+      <div class="ornament"><span>✦ ✦ ✦</span></div>
+      <p class="page-intro" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+        This website is a digital collection dedicated to presenting the history, cultural heritage, and natural beauty of Mauban, Quezon. Through historical accounts, photographs, and informative articles, it aims to help visitors appreciate the town's rich past and the landmarks that continue to define its identity.
+      </p>
+
+      <div style="max-width: 600px; margin: 3rem auto 0; border-top: 1px solid var(--gold-dim); padding-top: 2rem;">
+        <h3 class="cinzel" style="font-size: 1.4rem; color: var(--charcoal); margin-bottom: 0.75rem;">Credits & Sources</h3>
+        <p style="color: var(--brown); font-size: 0.95rem; line-height: 1.6;">
+          Historical information and images are drawn from local sources, public archives, and community-contributed materials. Where possible, original photographs and references have been used with respect for their licensing and access permissions. This is a non-commercial, educational project.
+        </p>
+        <p style="color: var(--brown); font-size: 0.95rem; line-height: 1.6; margin-top: 0.75rem;">
+          <em>All images are used for illustrative purposes and may not depict exact locations. Please refer to original sources for verified historical data.</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MAP SECTION ==================== -->
+  <section class="map-section" id="map">
+    <div class="container">
+      <h2 class="section-heading">Map of Mauban</h2>
+      <div class="ornament"><span>✦ ✦ ✦</span></div>
+      
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123864.123456789!2d121.7!3d14.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339826e8eb9c2c2d%3A0x6e3b3a3c2b1b1b1b!2sMauban%2C%20Quezon!5e0!3m2!1sen!2sph!4v1625000000000!5m2!1sen!2sph" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map of Mauban, Quezon">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-ornament"><span>✦</span></div>
+      <div class="footer-text">Mauban, Quezon — History Lives Here</div>
+      <p class="footer-note">An educational website dedicated to the history, heritage, and natural beauty of Mauban, Quezon, Philippines.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#history">History</a>
+        <a href="#natural">Natural Attractions</a>
+        <a href="#heritage">Heritage Houses</a>
+        <a href="#landmarks">Historical Landmarks</a>
+        <a href="#about-page">About</a>
+      </div>
+      <div style="margin-top: 2rem; font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.15em; color: var(--gold-dim); text-transform: uppercase;">
+        © 2026 Mauban Heritage Project
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img src="" alt="Enlarged view" id="lightboxImg">
+  </div>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

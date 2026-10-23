@@ -16,7 +16,7 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container">
-      <a href="#home" class="logo-area" aria-label="Mauban Home">
+      <a href="index.html" class="logo-area" aria-label="Mauban Home">
         <div class="logo-emblem">✠</div>
         <div class="logo-text">
           <span class="main">Mauban</span>
@@ -31,12 +31,12 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#history">History</a></li>
-        <li><a href="#natural">Natural Attractions</a></li>
-        <li><a href="#heritage">Heritage Houses</a></li>
-        <li><a href="#landmarks">Historical Landmarks</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html#history">History</a></li>
+        <li><a href="index.html#natural">Natural Attractions</a></li>
+        <li><a href="index.html#heritage">Heritage Houses</a></li>
+        <li><a href="index.html#landmarks">Historical Landmarks</a></li>
+        <li><a href="index.html#about">About</a></li>
       </ul>
 
       <div class="nav-search-area">
@@ -49,7 +49,12 @@
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-image-wrapper">
-      <img src="maubann.jpg" alt="Sunset at Cagbalete Island, Mauban">
+      <img src="mauban.jpg" 
+           data-src="mauban.jpg,island.jpg,saint.jpg,kugunan.jpg,gatuban.jpg" 
+           id="heroSliderImg"
+           onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80';" 
+           alt="Mauban, Quezon" 
+           loading="eager">
     </div>
     <div class="container">
       <div class="hero-content">
@@ -183,6 +188,17 @@
             <div class="attraction-card-body">
               <h3>Mauban Public Bath</h3>
               <p>A glimpse into the town's ancient past.</p>
+              <span class="arrow-link">Discover <span class="arrow">→</span></span>
+            </div>
+          </a>
+          <!-- 6 -->
+          <a href="#landmarks" class="attraction-card" data-title="Gatuban Park">
+            <div class="attraction-card-img">
+              <img src="gatuban.jpg" alt="Gatuban Park" loading="lazy">
+            </div>
+            <div class="attraction-card-body">
+              <h3>Gatuban Park</h3>
+              <p>A memorial to the town's legendary defender.</p>
               <span class="arrow-link">Discover <span class="arrow">→</span></span>
             </div>
           </a>
@@ -390,33 +406,44 @@
       <p class="page-intro">Sites that stand as silent witnesses to Mauban's storied past.</p>
 
       <div class="attraction-page-grid">
+        <!-- Landmark 1 -->
         <div class="attraction-page-card">
           <img src="rizal.jpg" alt="Rizal Hill Park" loading="lazy">
           <div class="attraction-page-card-body">
             <h3>Rizal Hill Park</h3>
             <p>Historically known as Calvario Hill, this site features the Rizal Monument and served as an observation post during World War II, offering a panoramic view of the town and its surroundings.</p>
+            <!-- Read More Button pointing to the new page -->
+            <a href="landmark-details.html#rizal" class="read-more-link">Read More →</a>
           </div>
         </div>
+        <!-- Landmark 2 -->
         <div class="attraction-page-card">
           <img src="seawall.jpg" alt="Mauban Seawall" loading="lazy">
           <div class="attraction-page-card-body">
             <h3>Mauban Seawall</h3>
             <p>More than a coastal defense, the seawall holds cultural significance. It features the Gatuban monument and is remembered for its role during the Japanese landing in Quezon in 1941.</p>
+            <!-- Read More Button pointing to the new page -->
+            <a href="landmark-details.html#seawall" class="read-more-link">Read More →</a>
           </div>
         </div>
+        <!-- Landmark 3 -->
         <div class="attraction-page-card">
           <img src="publicbath.jpg" alt="Mauban Public Bath" loading="lazy">
           <div class="attraction-page-card-body">
             <h3>Mauban Public Bath</h3>
             <p>Reportedly constructed in 1725, this historic structure was built using limestone and seashells. It once supplied spring water to the community and is now preserved as a cherished historical landmark.</p>
+            <!-- Read More Button pointing to the new page -->
+            <a href="landmark-details.html#publicbath" class="read-more-link">Read More →</a>
           </div>
         </div>
-        <!-- New 4th Landmark -->
+        <!-- Landmark 4 -->
         <div class="attraction-page-card">
           <img src="gatuban.jpg" alt="Gatuban Park" loading="lazy">
           <div class="attraction-page-card-body">
             <h3>Gatuban Park</h3>
             <p>A public park dedicated to Gatuban, the legendary defender of Mauban. It serves as a memorial to his bravery and the town's enduring spirit.</p>
+            <!-- Read More Button pointing to the new page -->
+            <a href="landmark-details.html#gatuban" class="read-more-link">Read More →</a>
           </div>
         </div>
       </div>
@@ -467,14 +494,14 @@
     <div class="container">
       <div class="footer-ornament"><span>✦</span></div>
       <div class="footer-text">Mauban, Quezon — History Lives Here</div>
-      <p class="footer-note">An educational website dedicated to the history, heritage, and natural beauty of Mauban, Quezon, Philippines.</p>
+      <p class="footer-note">A educational website dedicated to the history, heritage, and natural beauty of Mauban, Quezon, Philippines.</p>
       <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#history">History</a>
-        <a href="#natural">Natural Attractions</a>
-        <a href="#heritage">Heritage Houses</a>
-        <a href="#landmarks">Historical Landmarks</a>
-        <a href="#about-page">About</a>
+        <a href="index.html">Home</a>
+        <a href="index.html#history">History</a>
+        <a href="index.html#natural">Natural Attractions</a>
+        <a href="index.html#heritage">Heritage Houses</a>
+        <a href="index.html#landmarks">Historical Landmarks</a>
+        <a href="index.html#about-page">About</a>
       </div>
       <div style="margin-top: 2rem; font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.15em; color: var(--gold-dim); text-transform: uppercase;">
         © 2026 Mauban Heritage Project

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detailed Histories — Mauban, Quezon</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ---------- EMBEDDED CSS FOR DETAILS PAGE ---------- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --forest: #101A15;
+      --charcoal: #11110F;
+      --gold: #C5A16A;
+      --parchment: #E9DCC2;
+      --ivory: #F5EBDD;
+      --brown: #76624A;
+      --gold-dim: rgba(197, 161, 106, 0.4);
+      --gold-light: #D4B88C;
+    }
+
+    body {
+      background-color: var(--parchment);
+      color: var(--charcoal);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 L20 12 L30 16 L20 20 L16 30 L12 20 L2 16 L12 12 Z' fill='none' stroke='%23C5A16A' stroke-width='2' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23C5A16A'/%3E%3C/svg%3E") 16 16, auto;
+    }
+
+    a, button { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 L20 12 L30 16 L20 20 L16 30 L12 20 L2 16 L12 12 Z' fill='none' stroke='%23C5A16A' stroke-width='2' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23C5A16A'/%3E%3C/svg%3E") 16 16, pointer; }
+
+    img { max-width: 100%; display: block; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    button { background: none; border: none; cursor: pointer; font: inherit; color: inherit; }
+    
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .cinzel { font-family: 'Cinzel', serif; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+
+    /* NAVBAR */
+    .navbar {
+      background: var(--forest);
+      border-bottom: 2px solid var(--gold);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .container { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .logo-area { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+    .logo-emblem {
+      width: 44px; height: 44px; border: 1.5px solid var(--gold); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; color: var(--gold);
+      font-size: 1.4rem; font-family: 'UnifrakturMaguntia', cursive; line-height: 1; background: rgba(197, 161, 106, 0.08);
+    }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-text .main { font-family: 'UnifrakturMaguntia', cursive; font-size: 1.8rem; color: var(--ivory); letter-spacing: 0.02em; }
+    .logo-text .sub { font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-top: 2px; }
+
+    .nav-links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.12em; color: var(--parchment);
+      text-transform: uppercase; transition: color 0.2s; position: relative; padding-bottom: 4px;
+    }
+    .nav-links a::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 1.5px; background: var(--gold); transition: width 0.25s ease; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .nav-links a.active { color: var(--gold); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; background: none; border: none; cursor: pointer; z-index: 1100; }
+    .hamburger span { display: block; width: 26px; height: 2px; background: var(--gold); transition: transform 0.3s, opacity 0.3s; }
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* PAGE TITLES */
+    .page-section { padding: 4rem 0 5rem; }
+    .page-section .container { max-width: 900px; }
+    .page-title { font-family: 'Cinzel', serif; font-size: 2.6rem; font-weight: 600; text-align: center; color: var(--charcoal); margin-bottom: 0.5rem; letter-spacing: 0.05em; }
+    .page-intro { font-size: 1.2rem; color: var(--brown); text-align: center; max-width: 700px; margin: 0 auto 3rem; line-height: 1.7; }
+
+    .ornament { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 2.5rem; color: var(--gold); }
+    .ornament::before, .ornament::after { content: ''; height: 1px; width: 60px; background: var(--gold-dim); }
+    .ornament span { font-size: 1.2rem; letter-spacing: 0.3em; }
+
+    /* DETAILED BLOCKS */
+    .detailed-history-section { background: var(--ivory); padding: 5rem 0; border-top: 1px solid var(--gold-dim); }
+    
+    .detail-block {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+      margin-bottom: 5rem;
+      align-items: center;
+    }
+    .detail-block:last-child { margin-bottom: 0; }
+    .detail-block:nth-child(even) { flex-direction: row-reverse; }
+
+    .detail-image {
+      flex: 1;
+      position: relative;
+      border: 1px solid var(--gold-dim);
+      padding: 0.5rem;
+      background: var(--parchment);
+    }
+    .detail-image img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border: 1px solid var(--gold-dim);
+      filter: sepia(0.2) contrast(0.95);
+    }
+
+    .detail-text { flex: 1.2; }
+    .detail-text h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.03em;
+    }
+    
+    .sub-ornament {
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; color: var(--gold);
+    }
+    .sub-ornament::before, .sub-ornament::after {
+      content: ''; height: 1px; width: 40px; background: var(--gold-dim);
+    }
+
+    .detail-text p {
+      font-size: 1.1rem;
+      color: var(--brown);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+      text-align: justify;
+    }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.6rem; font-family: 'Cinzel', serif;
+      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold);
+      border: 1.5px solid var(--gold); padding: 0.85rem 1.8rem; background: transparent;
+      transition: background 0.25s, color 0.25s; cursor: pointer;
+    }
+    .btn-outline:hover { background: var(--gold); color: var(--forest); }
+    .btn-outline .arrow { transition: transform 0.25s; }
+    .btn-outline:hover .arrow { transform: translateX(4px); }
+
+    /* FOOTER */
+    .footer { background: var(--charcoal); color: var(--parchment); text-align: center; padding: 3rem 0 2rem; border-top: 2px solid var(--gold); }
+    .footer-ornament { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; color: var(--gold); }
+    .footer-ornament::before, .footer-ornament::after { content: ''; height: 1px; width: 50px; background: var(--gold-dim); }
+    .footer-text { font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+    .footer-note { font-size: 0.85rem; color: var(--parchment); opacity: 0.6; max-width: 500px; margin: 0 auto 1.5rem; line-height: 1.5; }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .footer-links a { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.12em; color: var(--parchment); text-transform: uppercase; opacity: 0.7; transition: opacity 0.2s, color 0.2s; }
+    .footer-links a:hover { opacity: 1; color: var(--gold); }
+    
+    .back-to-top {
+      position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px;
+      background: var(--forest); color: var(--gold); border: 1.5px solid var(--gold);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s; z-index: 900;
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .detail-block { flex-direction: column; gap: 1.5rem; }
+      .detail-block:nth-child(even) { flex-direction: column; }
+      .detail-image img { height: 300px; }
+    }
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        position: fixed; top: 0; right: -100%; width: 75%; max-width: 320px; height: 100vh;
+        background: var(--forest); flex-direction: column; justify-content: center; gap: 2rem;
+        padding: 2rem; transition: right 0.35s ease; border-left: 2px solid var(--gold);
+        box-shadow: -8px 0 30px rgba(0, 0, 0, 0.4);
+      }
+      .nav-links.open { right: 0; }
+      .page-title { font-size: 2rem; }
+      .detail-text h3 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-area" aria-label="Mauban Home">
+        <div class="logo-emblem">✠</div>
+        <div class="logo-text">
+          <span class="main">Mauban</span>
+          <span class="sub">Quezon, Philippines</span>
+        </div>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#history">History</a></li>
+        <li><a href="index.html#natural">Natural Attractions</a></li>
+        <li><a href="index.html#heritage">Heritage Houses</a></li>
+        <li><a href="index.html#landmarks">Historical Landmarks</a></li>
+        <li><a href="index.html#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- DETAILS CONTENT -->
+  <section class="page-section detailed-history-section" style="padding-top: 4rem;">
+    <div class="container">
+      <h2 class="page-title">Stories of the Landmarks</h2>
+      <div class="ornament"><span>✦ ✦ ✦</span></div>
+      <p class="page-intro">Delve deeper into the rich and storied past of Mauban's most significant historical sites.</p>
+      
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <a href="index.html#landmarks" class="btn-outline" style="border-color: var(--brown); color: var(--brown);">
+          <span class="arrow" style="transform: rotate(180deg);">→</span> Back to Landmarks
+        </a>
+      </div>
+
+      <!-- Detailed: Rizal Hill Park -->
+      <div class="detail-block" id="rizal">
+        <div class="detail-image">
+          <img src="rizal.jpg" alt="Rizal Hill Park" loading="lazy">
+        </div>
+        <div class="detail-text">
+          <h3>Rizal Hill Park</h3>
+          <div class="sub-ornament"><span>✦</span></div>
+          <p>Originally known as Calvario Hill, this elevated site has long served as a strategic vantage point for the town. During the Spanish colonial era, it was a place of religious procession, marked by the Stations of the Cross that wound their way to the summit. The hill's panoramic view of Mauban and the bay made it an ideal location for the Rizal Monument, erected in honor of the national hero, Dr. Jose Rizal.</p>
+          <p>During World War II, the hill's strategic importance was rekindled. It served as a crucial observation post for Filipino and American forces, providing early warnings of enemy movements across the bay. Today, Rizal Hill Park is a tranquil public space where locals and visitors alike gather to watch the sunset, reflecting on the layers of history that lie beneath its peaceful surface.</p>
+        </div>
+      </div>
+
+      <!-- Detailed: Mauban Seawall -->
+      <div class="detail-block" id="seawall">
+        <div class="detail-text">
+          <h3>Mauban Seawall</h3>
+          <div class="sub-ornament"><span>✦</span></div>
+          <p>The Mauban Seawall is more than just a coastal defense; it is a testament to the town's resilience and its enduring relationship with the sea. Built to protect the shoreline from erosion and storm surges, the seawall has become an integral part of the community's daily life. It is a place for morning jogs, evening strolls, and gathering with friends and family.</p>
+          <p>The seawall is perhaps most famous for its role during the Japanese landing in Quezon in 1941. As enemy forces approached, local guerrillas and townsfolk used the seawall as a defensive position, engaging in fierce resistance. The Gatuban monument, which stands proudly along the wall today, serves as a poignant reminder of the town's legendary defender and the bravery of its people during those dark times.</p>
+        </div>
+        <div class="detail-image">
+          <img src="seawall.jpg" alt="Mauban Seawall" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Detailed: Mauban Public Bath -->
+      <div class="detail-block" id="publicbath">
+        <div class="detail-image">
+          <img src="publicbath.jpg" alt="Mauban Public Bath" loading="lazy">
+        </div>
+        <div class="detail-text">
+          <h3>Mauban Public Bath</h3>
+          <div class="sub-ornament"><span>✦</span></div>
+          <p>Reportedly constructed in 1725, the Mauban Public Bath is one of the town's oldest surviving structures. Built using limestone and crushed seashells, it is a remarkable example of early colonial engineering. The bath was designed to capture the natural spring water that flowed down from the nearby hills, providing a clean and reliable source of water for the community.</p>
+          <p>For centuries, the bath served as a social hub where locals would gather to wash clothes, bathe, and exchange news. While its practical use has diminished over time, the structure remains a cherished historical landmark, preserved by the local government and community organizations as a tangible link to Mauban's colonial past.</p>
+        </div>
+      </div>
+
+      <!-- Detailed: Gatuban Park -->
+      <div class="detail-block" id="gatuban">
+        <div class="detail-text">
+          <h3>Gatuban Park</h3>
+          <div class="sub-ornament"><span>✦</span></div>
+          <p>Gatuban Park is a living memorial dedicated to the legendary figure of Gat Uban, whose name is inextricably linked to the origins of Mauban. According to local lore, Gat Uban was a valiant leader who organized the townsfolk to defend against frequent Moro pirate raids. His nickname, which translates to "gray hair," is said to have been earned through his wisdom and experience in battle.</p>
+          <p>The park, located near the town center, offers a serene escape from the bustling streets. It features lush greenery, shaded walkways, and a monument honoring Gat Uban. It stands as a powerful reminder of the town's indigenous roots and the brave souls who fought to protect their home, ensuring that the legend of Mauban's defender will never be forgotten.</p>
+        </div>
+        <div class="detail-image">
+          <img src="gatuban.jpg" alt="Gatuban Park" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-ornament"><span>✦</span></div>
+      <div class="footer-text">Mauban, Quezon — History Lives Here</div>
+      <p class="footer-note">A educational website dedicated to the history, heritage, and natural beauty of Mauban, Quezon, Philippines.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#history">History</a>
+        <a href="index.html#natural">Natural Attractions</a>
+        <a href="index.html#heritage">Heritage Houses</a>
+        <a href="index.html#landmarks">Historical Landmarks</a>
+        <a href="index.html#about-page">About</a>
+      </div>
+      <div style="margin-top: 2rem; font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.15em; color: var(--gold-dim); text-transform: uppercase;">
+        © 2026 Mauban Heritage Project
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script>
+    // EMBEDDED JS FOR DETAILS PAGE
+    (function() {
+      'use strict';
+
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+          const isOpen = navLinks.classList.toggle('open');
+          hamburger.classList.toggle('active');
+          hamburger.setAttribute('aria-expanded', isOpen);
+        });
+
+        navLinks.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // Back to Top
+      const backToTop = document.getElementById('backToTop');
+
+      if (backToTop) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        });
+
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Smooth scroll for hash links on page load
+      window.addEventListener('load', function() {
+        if (window.location.hash) {
+          const targetElement = document.querySelector(window.location.hash);
+          if (targetElement) {
+            setTimeout(() => {
+              const offset = 100;
+              const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+              window.scrollTo({
+                top: elementPosition - offset,
+                behavior: 'smooth'
+              });
+            }, 100);
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
